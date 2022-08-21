@@ -17,7 +17,7 @@ function createGrid(gridSize) {
 
 createGrid(gridSize);
 
-const squares = document.querySelectorAll('.square');
+let squares = document.querySelectorAll('.square');
 
 squares.forEach((square) => {
     square.addEventListener('mouseenter', () => {
@@ -39,4 +39,12 @@ button.addEventListener('click', () => {
     }
     deleteGrid();
     createGrid(newSize);
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            square.classList.add('colored');
+        })
+    })
 })
+
+
