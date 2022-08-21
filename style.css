@@ -1,3 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -17,4 +31,8 @@
 
 .colored {
     background-color: black;
+}
+
+.sizeSet {
+    width: 200px;
 }
