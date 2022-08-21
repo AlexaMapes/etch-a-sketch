@@ -25,11 +25,18 @@ squares.forEach((square) => {
     })
 })
 
+function deleteGrid() {
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
+}
+
 const button = document.querySelector('.sizeSet');
 button.addEventListener('click', () => {
     let newSize = 0;
     while ((newSize <=0) || (newSize > 100)) {
         newSize = prompt("Please enter new grid size (max 100)");
     }
+    deleteGrid();
     createGrid(newSize);
 })
