@@ -24,3 +24,12 @@ squares.forEach((square) => {
         square.classList.add('colored');
     })
 })
+
+const button = document.querySelector('.sizeSet');
+button.addEventListener('click', () => {
+    let newSize = 0;
+    while ((newSize <=0) || (newSize > 100)) {
+        newSize = prompt("Please enter new grid size (max 100)");
+    }
+    createGrid(newSize);
+})
